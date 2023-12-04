@@ -9,28 +9,156 @@
 
 .container {
     display: grid;
-    grid-template: 1fr 4fr / 1fr 3fr;
-    border: 1px solid black;
-    height: 1000px;
-    width: 1000px;
+    grid-template: 1fr 4fr / 1fr 4fr;
+    height: 1024px;
+    min-width: 1024px;
 }
 
 .sidebar {
     color: white;
-    background-color: blue;
+    background-color: #83A2FF;
     grid-column: 1 / 2;
     grid-row: 1 / 6;
     display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: min-content;
     gap: 3rem;
+    padding: 1rem;
+    padding-right: 4rem;
+}
+
+.sidebar h2, h3 {
+    margin: 0;
+}
+
+.sidebarLogo svg {
+    margin-right: 1rem;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.sidebarMainSelectors,
+.sidebarSecondarySelectors {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-rows: 1.2rem;
+    grid-auto-rows: 1.2rem;
+}
+
+.sidebarMainSelectors a,
+.sidebarSecondarySelectors a {
+    margin-left: 12px;
+}
+
+.sidebarMainSelectors svg,
+.sidebarSecondarySelectors svg {
+    margin-right: 24px;
 }
 
 .header {
-    background-color: red;
+    background-color: #B4BDFF;
     grid-column: 2 / 5;
     box-shadow: 0px 3px 2px lightgray;
+    padding: 2rem 2.5rem 2rem 2rem;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    gap: 2rem;
 }
 
-.contentContainer {
-    background-color: gray;
-    grid-column: 2 / 5;
+.headerTopRow,
+.headerBottomRow {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    height: min-content;
+
 }
+
+.headerTopRow div {
+    display: flex;
+    align-items: center;
+}
+
+#searchbar {
+    background-color: lightgray;
+    border: none;
+    width: 512px;
+    height: 30px;
+    border-radius: 1rem;
+    margin-left: 1rem;
+}
+
+label[for="searchbar"] {
+margin-top: 4px;
+}
+
+#bell {
+    margin-top: 4px;
+}
+
+#userIcon {
+    margin-left: 2rem;
+}
+
+.accountControlsContainer h2 {
+    color: white;
+    margin: 0;
+    margin-left: 2rem;
+}
+
+.greetingContainer {
+    display: flex;
+}
+
+.greetingContainer p, h1 {
+    margin: 8px 0 0 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greetingContainer p {
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+}
+
+.headerButtonsContainer {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+}
+
+.headerButton {
+    align-self: center;
+    height: 48px;
+    width: 96px;
+    border: none;
+    border-radius: 2rem;
+    background-color: #83A2FF;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+
+
+.contentContainer {
+    background-color: lightgray;
+    grid-column: 2 / 5;
+    display: grid;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* #FFE3BB */
+/* #FFD28F */
